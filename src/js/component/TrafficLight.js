@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export function TrafficLight() {
+export const TrafficLight = () => {
 	const [color, setColor] = useState("red");
 
 	let redSelected = "";
@@ -34,4 +34,4 @@ export function TrafficLight() {
 			</div>
 		</div>
 	);
-}
+};
