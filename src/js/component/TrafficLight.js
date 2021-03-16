@@ -3,33 +3,23 @@ import React, { useState, useEffect } from "react";
 export const TrafficLight = () => {
 	const [color, setColor] = useState("red");
 
-	let redSelected = "";
-	let yellowSelected = "";
-	let greenSelected = "";
-
-	switch (color) {
-		case "red":
-			redSelected = "selected";
-			break;
-		case "yellow":
-			yellowSelected = "selected";
-			break;
-		case "green":
-			greenSelected = "selected";
-			break;
-	}
-
 	return (
 		<div className="container my-5">
 			<div className="container bg-dark p-3 rounded">
 				<div
-					className={"light red " + redSelected}
+					className={
+						"light red " + (color == "red" ? "selected" : "")
+					}
 					onClick={() => setColor("red")}></div>
 				<div
-					className={"light yellow " + yellowSelected}
+					className={
+						"light yellow " + (color == "yellow" ? "selected" : "")
+					}
 					onClick={() => setColor("yellow")}></div>
 				<div
-					className={"light green " + greenSelected}
+					className={
+						"light green " + (color == "green" ? "selected" : "")
+					}
 					onClick={() => setColor("green")}></div>
 			</div>
 		</div>
